@@ -1,0 +1,10 @@
+# LeetCode
+leetcode javascript
+// XOR is commutative, means- 1^2^1 = 1^1^2 (since a^a =0 hence 2 will be left)
+var singleNumber = function(nums) {
+    let res = nums[0];
+    for(let i = 1; i < nums.length; i++){
+        res = res ^ nums[i]
+    }
+    return res;
+};
