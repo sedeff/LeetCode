@@ -1,0 +1,18 @@
+# LeetCode/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+ var plusOne = function(digits) {
+    digits = digits.reverse()
+    let overflow = 1
+    const result = digits.map(element => {
+      const newRawElement = element + overflow
+      overflow = Math.floor(newRawElement / 10)
+      return newRawElement % 10
+    })
+    if (overflow > 0) {
+      result.push(overflow)
+    }
+    return result.reverse()
+};
+
